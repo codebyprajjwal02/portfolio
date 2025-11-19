@@ -1,0 +1,189 @@
+/* Container */
+.page.home-page {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg) 0%, var(--card) 100%);
+  overflow: hidden;
+}
+
+/* Decorative elements */
+.page.home-page::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Main content */
+.home-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* Profile photo container */
+.profile-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Profile photo */
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-container:hover .profile {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.home-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Subtitle */
+.home-sub {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Description */
+.home-description {
+  margin-bottom: 2rem;
+}
+
+.home-description p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* CTA buttons */
+.home-cta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Button styles */
+.btn {
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 102, 255, 0.4);
+}
+
+.btn.secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn.secondary:hover {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(0, 102, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
+  }
+  
+  .home-sub {
+    font-size: 1.2rem;
+  }
+  
+  .profile {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .home-cta {
+    gap: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-title {
+    font-size: 2rem;
+  }
+  
+  .home-sub {
+    font-size: 1rem;
+  }
+  
+  .profile {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .home-cta {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

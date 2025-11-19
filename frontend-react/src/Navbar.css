@@ -1,0 +1,31 @@
+/* small dedicated navbar spacing */
+.navbar { align-items:center; }
+.brand { font-weight:800; font-size: 1.5rem; color:var(--accent); cursor:pointer; transition: transform 0.3s ease; }
+.brand:hover { transform: scale(1.05); }
+.nav-links { display:flex; gap:15px; align-items:center; }
+.nav-link { padding:10px 15px; border-radius:8px; color:var(--text); text-decoration:none; font-weight:600; transition: all 0.3s ease; position: relative; }
+.nav-link:hover { color: var(--accent); background: rgba(0,0,0,0.03); transform: translateY(-2px); }
+body[data-theme="dark"] .nav-link:hover { background: rgba(255,255,255,0.05); }
+.btn.small.toggle { padding:10px 15px; border-radius:8px; background:transparent; color:var(--text); border:1px solid rgba(0,0,0,0.1); transition: all 0.3s ease; font-weight: 600; }
+body[data-theme="dark"] .btn.small.toggle { border:1px solid rgba(255,255,255,0.1); }
+.btn.small.toggle:hover { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; border-color: transparent; transform: translateY(-2px); }
+
+/* Active link styling */
+.nav-link.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white !important;
+  box-shadow: 0 4px 10px rgba(0, 102, 255, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links { gap:8px; }
+  .nav-link { padding:8px 12px; font-size: 0.9rem; }
+  .btn.small.toggle { padding:8px 12px; font-size: 0.9rem; }
+}
+
+@media (max-width: 600px) {
+  .nav-links { gap:5px; }
+  .nav-link { padding:6px 10px; font-size: 0.85rem; }
+  .btn.small.toggle { padding:6px 10px; font-size: 0.85rem; }
+}

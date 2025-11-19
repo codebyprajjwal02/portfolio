@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name - Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<!-- AOS Animation Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+</head>
+<body>
+<header data-aos="fade-down">
+  <h1>Your Name</h1>
+  <h2>Professional Title</h2>
+</header>
+
+<section id="about" data-aos="fade-right">
+  <h3>About Me</h3>
+  <p>Short bio about yourself...</p>
+</section>
+
+<section id="skills" data-aos="fade-left">
+  <h3>Skills</h3>
+  <ul>
+    <li>JavaScript</li>
+    <li>Node.js</li>
+    <li>React</li>
+  </ul>
+</section>
+
+<section id="projects" data-aos="zoom-in">
+  <h3>Projects</h3>
+  <div class="project">
+    <h4>Project Name</h4>
+    <p>Description...</p>
+    <a href="#">Live Demo</a> | <a href="#">GitHub</a>
+  </div>
+</section>
+
+<section id="education" data-aos="fade-up">
+  <h3>Education</h3>
+  <p>Degree, College, Year</p>
+</section>
+
+<section id="certifications" data-aos="fade-up">
+  <h3>Certifications</h3>
+  <ul>
+    <li>Certification 1</li>
+    <li>Certification 2</li>
+  </ul>
+</section>
+
+<section id="resume" data-aos="fade-right">
+  <h3>Resume</h3>
+  <a href="/resume.pdf" download>Download My Resume</a>
+</section>
+
+<section id="contact" data-aos="fade-left">
+  <h3>Contact</h3>
+  <form action="/contact" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000 });
+</script>
+</body>
+</html>

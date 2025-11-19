@@ -1,0 +1,90 @@
+/* ================================
+   Skills Section Layout
+================================= */
+.skills-section {
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+   Skill Circle Styles
+================================= */
+.skill-card {
+  background: var(--box-bg);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s, background 0.3s;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  background: var(--box-hover);
+}
+
+/* Circle Progress Container */
+.skill-circle {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 15px;
+}
+
+/* Circular Progress Animation */
+.skill-circle svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.skill-circle circle {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.5s ease;
+}
+
+.skill-bg {
+  stroke: #ddd;
+}
+
+.skill-progress {
+  stroke: url(#gradient);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+
+/* Skill Percentage in Center */
+.skill-percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Skill Title */
+.skill-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  margin-top: 10px;
+}
+
+/* ================================
+   Dark Mode Adjustments
+================================= */
+[data-theme="dark"] .skill-bg {
+  stroke: #444;
+}
