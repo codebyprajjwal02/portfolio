@@ -4,7 +4,8 @@ import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
-import Testimonials from "./Testimonials";
+import Experience from "./Experience";
+import Certifications from "./Certifications";
 import Contact from "./Contact";
 
 /*
@@ -20,8 +21,9 @@ export default function App() {
         <Home />
         <About />
         <Skills />
+        <Experience />
         <Projects />
-        <Testimonials />
+        <Certifications />
         <Contact />
       </main>
     </>
